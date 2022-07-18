@@ -15,20 +15,6 @@ db.execute("CREATE TABLE movies(movie_id INTEGER, movie TEXT, viewer TEXT, movie
 with open("ticketbookings.csv","r") as file:
     reader = csv.DictReader(file)
 
-    # for row in reader:
-    #     name = row["Name"].upper()
-    #     accessnumber=row["Access Number"]
-    #     email=row["Email"]
-        
-    #     viewer=row["Viewing"]
-
-    #     nameid = db.execute("INSERT INTO customers (name, accessnumber, email) VALUES(?,?,?)", name, accessnumber, email)
-
-    #     ticket_id = row["Ticket Number"]
-    #     db.execute("INSERT INTO tickets(ticket_id, viewer) VALUES(?,?)",ticket_id, viewer)
-
-    #     movieId=row["Movie"]
-    #     db.execute("INSERT INTO movies(movie_id) VALUES(?)",movieId)
     for row in reader:
         name = row["Name"].upper()
         accessnumber=row["Access Number"]
@@ -48,8 +34,6 @@ with open("ticketbookings.csv","r") as file:
         movie_number=row["MovieID"]
         viewer=row["Viewing"]
         id = db.execute("INSERT INTO movies(movie_id,movie, movie_number, viewer) VALUES(?,?,?,?)",movie_id,movie, movie_number,viewer)
-
-        # # ticketid=row["Ticket Number"]
         
 
 
