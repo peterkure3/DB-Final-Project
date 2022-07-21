@@ -1,0 +1,4 @@
+Movie Ticket booking project.
+THe database stores details about ticket booking information for customers and the movies they have chosen to watch.
+The database is relational in nature.
+Normalization has been applied to reduce redundancy of the database by breaking up the data into smaller tables.
